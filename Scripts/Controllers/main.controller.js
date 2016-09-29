@@ -8,6 +8,7 @@ angular.module("webshopModule")
         function ($scope, $route, $location) {
             $scope.$route = $route;
             $scope.products = [];
+            $scope.carts = [];
 
             $scope.loadProducts = function () {
                 var dataString = localStorage.getItem("products");
@@ -20,11 +21,23 @@ angular.module("webshopModule")
                 localStorage.setItem("products", jsonString);
             }
 
+            $scope.loadCarts = function () {
+                var dataString = localStorage.getItem("carts");
+                if (dataString)
+                    $scope.carts = JSON.parse(dataString);
+            }
+
+            $scope.saveCarts = function () {
+                var jsonString = JSON.stringify($scope.carts);
+                localStorage.setItem("carts", jsonString);
+            }
+
             $scope.go = function (url) {
                 $location.path(url);
             }
 
 
             $scope.loadProducts();
+            $scope.loadCarts();
         }
     ]);

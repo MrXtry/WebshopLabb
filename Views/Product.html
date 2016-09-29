@@ -1,0 +1,51 @@
+﻿<div class="row">
+    <div class="col-sm-8">
+        <div ng-include="'Views/Partials/Carousel.html'"></div>
+    </div>
+    <div class="col-sm-4">
+        <div class="well">
+            <h3 ng-bind="product.name"></h3>
+        </div>
+        <div class="well">
+            <p ng-bind="product.description"></p>
+        </div>
+        <div class="row">
+            <div class="col-sm-12">
+                <div class="row">
+                    <div class="col-sm-5">
+                        <button type="button" class="btn btn-success">Add to Cart</button>
+                    </div>
+                    <div class="col-sm-5">
+                        <span id="productGlyphicon" class="glyphicon glyphicon-shopping-cart" aria-hidden="true"></span>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+<hr>
+
+
+<div class="container text-center">
+    <h3 ng-bind="product.content"></h3>
+    <br>
+    <div class="row">
+        <div class="col-sm-3">
+            <img src="http://placehold.it/150x80?text=IMAGE" class="img-responsive" style="width:100%" alt="Image">
+            <p>Current Project</p>
+        </div>
+        <div class="col-sm-3">
+            <img src="http://placehold.it/150x80?text=IMAGE" class="img-responsive" style="width:100%" alt="Image">
+            <p>Project 2</p>
+        </div>
+        <div class="col-sm-3">
+            <img src="http://placehold.it/150x80?text=IMAGE" class="img-responsive" style="width:100%" alt="Image">
+            <p>Project 2</p>
+        </div>
+        <div class="col-sm-3">
+            <img src="http://placehold.it/150x80?text=IMAGE" class="img-responsive" style="width:100%" alt="Image">
+            <p>Project 2</p>
+        </div>
+    </div>
+    <hr>
+</div>

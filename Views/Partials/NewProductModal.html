@@ -1,0 +1,58 @@
+﻿<div id="newProductModal" class="modal fade" role="dialog">
+    <div class="modal-dialog">
+
+        <!-- Modal content -->
+        <div class="modal-content">
+            <div class="modal-header">
+                <button type="button" class="close" data-dismiss="modal">
+                    &times;
+                </button>
+                <h4 class="modal-title">Add product</h4>
+            </div>
+            <div class="modal-body">
+                <form ng-submit="addProduct()">
+                    <div class="form-group">
+                        <label for="product-name">Product name:</label>
+                        <input type="text"
+                               class="form-control"
+                               ng-model="newProduct.name"
+                               placeholder="Product name..." />
+                    </div>
+                    <div class="form-group">
+                        <label for="product-description">Product description:</label>
+                        <input type="text"
+                               class="form-control"
+                               ng-model="newProduct.description"
+                               placeholder="Product description..." />
+                    </div>
+                    <div class="form-group">
+                        <label for="product-content">Product content:</label>
+                        <textarea type="text"
+                               class="form-control"
+                               ng-model="newProduct.content"
+                               placeholder="Product content..." />
+                    </div>
+                    <div class="form-group">
+                        <label for="product-imageUrl">Product image:</label>
+                        <div class="input-group">
+                            <span class="input-group-addon" id="basic-addon3">https://placehold.it/1920x500</span>
+                            <input type="text" 
+                                   class="form-control" 
+                                   id="basic-addon3"
+                                   ng-model="newProduct.image.url"
+                                   placeholder="Product image url...">
+                        </div>
+                    </div>
+                    <button type="submit" class="btn btn-primary">
+                        Add product
+                    </button>
+                </form>
+            </div>
+            <div class="modal-footer">
+                <button type="button" class="btn btn-default" data-dismiss="modal">
+                    Close
+                </button>
+            </div>
+        </div>
+    </div>
+</div>

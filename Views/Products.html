@@ -3,7 +3,55 @@
         <div class="row">
             <div class="col-md-12">
                 <h1 ng-bind="title"></h1>
+                <button type="button"
+                        class="btn btn-success"
+                        data-toggle="modal"
+                        data-target="#newProductModal">
+                    Add product
+                </button>
+            </div>
+        </div>
+        <br />
+        <div class="row">
+            <div class="col-md-12">
+                <div class="row">
+                    <div class="col-md-4" ng-repeat="product in products track by $index">
+                        <div class="panel panel-success">
+                            <div class="panel-heading" ng-bind="product.name"></div>
+                            <div class="panel-body">
+                                <img ng-src="{{product.image.url}}" class="img-responsive" style="width:100%" alt="{{product.image.alt}}" />
+                            </div>
+
+                            <div class="panel-footer col-md-12">
+                                <div class="row">
+                                    <div class="col-md-9">
+                                        <div class="row">
+                                            <div class="col-md-12"><h6 ng-bind="product.description"></h6></div>
+                                        </div>
+                                    </div>
+
+                                    <div class="row">
+                                        <div class="col-md-3">
+                                            <div class="row">
+                                                <div class="col-md-6">
+                                                    <span class="glyphicon glyphicon-trash" aria-hidden="true" ng-click="removeProduct($index)"></span>
+                                                </div>
+
+                                                <div class="col-md-6">
+                                                    <span class="glyphicon glyphicon-arrow-right" aria-hidden="true" ng-click="go('Products/' + product.id)"></span>
+                                                    <span class="glyphicon glyphicon-shopping-cart" aria-hidden="true" ng-click="addCart($index)"></span>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
             </div>
         </div>
     </div>
 </div>
+
+<div ng-include="'Views/Partials/NewProductModal.html'"></div>

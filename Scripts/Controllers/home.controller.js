@@ -6,5 +6,7 @@ angular.module("webshopModule")
         function ($scope) {
             $scope.title = "Home";
 
+            $scope.carouselImages = $scope.products.slice(Math.max($scope.products.length - 3, 1));
+
         }
     ]);

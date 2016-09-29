@@ -1,0 +1,24 @@
+﻿<div class="row">
+    <div class="col-md-12">
+        <div class="row">
+            <div class="col-md-12">
+                <h1 ng-bind="title"></h1>
+            </div>
+        </div>
+        <br />
+        <div class="row">
+            <div class="col-md-12">
+                <div class="row">
+                    <div class="col-md-4" ng-repeat="cart in carts track by $index">
+                        <div class="well">
+                            <h4 ng-bind="cart.name"></h4>
+                            <p ng-bind="cart.description"></p>
+                        </div>
+                        <button type="button" class="btn btn-danger" ng-click="removeCart($index)">Remove</button>
+                    </div>
+                    <br />
+                </div>
+            </div>
+        </div>
+    </div>
+</div>

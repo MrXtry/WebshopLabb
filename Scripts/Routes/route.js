@@ -19,6 +19,18 @@ angular.module("webshopModule")
                     controller: "ProductsController",
                     caseInsensitiveMatch: true,
                     activeTab: "Products"
+                })
+                .when("/Products/:id", {
+                    templateUrl: "Views/Product.html",
+                    controller: "ProductController",
+                    caseInsensitiveMatch: true,
+                    activeTab: "Products"
+                })
+                .when("/Cart", {
+                    templateUrl: "Views/Cart.html",
+                    controller: "CartController",
+                    caseInsensitiveMatch: true,
+                    activeTab: "Cart"
                 });
         }
     ]);
