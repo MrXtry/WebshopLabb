@@ -6,6 +6,7 @@ angular.module("webshopModule")
         "$routeParams",
         function ($scope, $routeParams) {
             $scope.title = "Product";
+            $scope.carouselunit = true;
             
             $scope.product = $scope.products.filter(function (product) {
                 return product.id == $routeParams.id;
@@ -14,7 +15,10 @@ angular.module("webshopModule")
             $scope.carouselImages = [];
             $scope.carouselImages.push($scope.product);
 
-            console.log($scope.product);
-            console.log($scope.carouselImages);
+            $scope.addCart = function () {
+
+                $scope.carts.push($scope.product);
+                $scope.saveCarts();
+            }
         }
     ]);

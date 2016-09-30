@@ -41,7 +41,7 @@ angular.module("webshopModule")
 
             $scope.addCart = function (index) {
                 newCart = $scope.products[index];
-                console.log(newCart);
+               
                 $scope.carts.push(newCart);
                 newCart = {};
 
